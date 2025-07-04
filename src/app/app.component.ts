@@ -1,14 +1,40 @@
-import { Component } from '@angular/core';
-import { HojasDeVidaComponent } from './hojas-de-vida/hojas-de-vida.component';
-import { NewPasswordComponent } from '../app/new-password/new-password.component'
-import { HojasDeVidaComponentt } from './hojas-de-vida2/hojas-de-vida.component';
+import { Component, ViewChild } from '@angular/core';
+import { ButtonModule } from 'primeng/button';
+
+import { InputTextModule } from 'primeng/inputtext';
+
+import { DialogModule } from 'primeng/dialog';
+import { CalendarModule } from 'primeng/calendar';
+import { DropdownModule } from 'primeng/dropdown';
+
 
 @Component({
     selector: 'app-root',
-    imports: [HojasDeVidaComponent],
+    standalone: true,
+    imports: [DialogModule, ButtonModule, InputTextModule, CalendarModule, DropdownModule],
     templateUrl: './app.component.html',
-    styleUrl: './app.component.scss',
-    standalone: true
+    styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+    visible: boolean = false;
+
+    showDialog() {
+        this.visible = true;
+    }
+
+    genderOptions = [
+        { label: 'Masculino', value: 'male' },
+        { label: 'Femenino', value: 'female' },
+        { label: 'Otro', value: 'other' }
+    ];
+
+    educationOptions = [
+        { label: 'Primaria', value: 'primary' },
+        { label: 'Secundaria', value: 'secondary' },
+        { label: 'Universidad', value: 'university' }
+    ];
+    
+    date2: Date | undefined;
+
 }
+

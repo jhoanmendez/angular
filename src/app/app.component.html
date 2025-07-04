@@ -1,1 +1,34 @@
-<app-hojas-de-vida></app-hojas-de-vida>
+<div class="card flex justify-content-center">
+    <p-button (onClick)="showDialog()" label="Show" />
+    <p-dialog header="Información del hijo" [modal]="true" [(visible)]="visible" [draggable]="false"
+        [style]="{ width: '60rem', height: '28rem', borderRadius: '24px'}" styleClass="modal">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="username" class="font-semibold w-6rem">Nombre completo:</label>
+                <input pInputText id="username" class="flex-auto" autocomplete="off"
+                    placeholder="Escriba aquí el nombre" />
+            </div>
+            <div class="form-group">
+                <label for="birthdate" class="font-bold block mb-2">Fecha de nacimiento:</label>
+                <p-calendar [iconDisplay]="'input'" [showIcon]="true" inputId="birthdate"
+                    placeholder="Elija aquí la fecha" />
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="gender">Sexo:</label>
+                <p-dropdown id="gender" [options]="genderOptions" placeholder="Elija una opción"></p-dropdown>
+            </div>
+            <div class="form-group">
+                <label for="education">Nivel educativo:</label>
+                <p-dropdown id="education" [options]="educationOptions" placeholder="Elija una opción"></p-dropdown>
+            </div>
+        </div>
+
+        <div class="button-row">
+            <p-button label="Cancelar" severity="secondary" class="btn-cancelar" (onClick)="visible = false" />
+            <p-button label="Guardar" class="btn-guardar" (onClick)="visible = false" />
+        </div>
+
+    </p-dialog>
+</div>

@@ -1,0 +1,110 @@
+:host ::ng-deep .modal {
+    box-sizing: border-box;
+}
+
+:host ::ng-deep .modal .p-dialog-header {
+    color: #0C4596 !important;
+    font-weight: 500;
+    font-size: 1.3rem;
+    
+
+    .p-dialog-header-icon {
+        color: #3C3C3C !important;
+        opacity: 1 !important;
+
+    }
+}
+
+:host ::ng-deep .modal label {
+    color: #4A628A !important;
+    font-weight: 500 !important;
+}
+
+:host ::ng-deep .modal .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+:host ::ng-deep .modal .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+:host ::ng-deep .modal .form-group {
+    flex: 1 1 250px;
+}
+
+:host ::ng-deep .modal .p-dialog-header {
+  padding-left: 3rem;
+  padding-top: 1.5rem;
+  
+  
+}
+
+:host ::ng-deep .modal .p-dialog-content {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 1.5rem;
+  padding-bottom: 0
+}
+
+
+:host ::ng-deep .modal .form-group .p-calendar {
+  width: 100%;
+}
+
+:host ::ng-deep .p-datepicker {
+  transform: scale(0.85);
+  transform-origin: top left;
+}
+:host ::ng-deep .p-datepicker table td > span {
+  width: 1.85rem;
+  height: 1.85rem;
+}
+
+
+:host ::ng-deep .modal .form-group .p-dropdown {
+  width: 100%;
+  box-sizing: border-box;
+}
+:host ::ng-deep .modal .button-row {
+  display: flex;
+  gap: 30px;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+:host ::ng-deep .btn-cancelar .p-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  padding: 16px 32px;
+  border-radius: 10px;
+  background: #FFF;
+  border: 1px solid #4A628A;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4A628A;
+}
+
+:host ::ng-deep .btn-guardar .p-button {
+  display: flex;
+  align-items: center;
+  height: 55px;
+  padding: 16px 32px;
+  gap: 40px; 
+  border-radius: 8px; 
+  background-color: #4A628A;
+  color: #FFF;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}

@@ -9,6 +9,8 @@ import { TreeTableModule } from 'primeng/treetable';
 import { TreeNode } from 'primeng/api';
 import { CardModule } from 'primeng/card';
 import { PanelModule } from 'primeng/panel';
+import { FormsModule } from '@angular/forms';
+import { CalendarModule } from 'primeng/calendar';
 
 
 
@@ -19,13 +21,11 @@ import { PanelModule } from 'primeng/panel';
 @Component({
   selector: 'app-hojas-de-vida',
   templateUrl: './hojas-de-vida.component.html',
-  styleUrl: './hojas-de-vida.component.scss',
-           imports: [ButtonModule]
-,
-
-  standalone: true
+  styleUrls: ['./hojas-de-vida.component.scss'],
+ 
+ 
 })
 export class HojasDeVidaComponent {
- 
+
 }
 
