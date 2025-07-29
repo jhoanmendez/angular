@@ -1,6 +1,6 @@
 <div class="card flex justify-content-center">
     <p-button (onClick)="showDialog()" label="Show" />
-    <p-dialog header="Información del hijo" [modal]="true" [(visible)]="visible" [draggable]="false"
+    <p-dialog header="Información del familiar" [modal]="true" [(visible)]="visible" [draggable]="false"
         [style]="{ width: '60rem', height: '28rem', borderRadius: '24px'}" styleClass="modal">
         <div class="form-row">
             <div class="form-group">
@@ -9,9 +9,13 @@
                     placeholder="Escriba aquí el nombre" />
             </div>
             <div class="form-group">
-                <label for="birthdate" class="font-bold block mb-2">Fecha de nacimiento:</label>
-                <p-calendar [iconDisplay]="'input'" [showIcon]="true" inputId="birthdate"
-                    placeholder="Elija aquí la fecha" />
+                <label for="relationship" class="font-semibold w-6rem">Parentesco:</label>
+                <p-dropdown id="relationship" [options]="relationshipOptions"
+                    placeholder="Elija una opción"></p-dropdown>
+            </div>
+            <div class="flex-auto">
+                <label for="icondisplay" class="font-bold block mb-2"> Default Icon </label>
+                <p-datepicker [(ngModel)]="date2" [iconDisplay]="'input'" [showIcon]="true" inputId="icondisplay" />
             </div>
         </div>
         <div class="form-row">
@@ -20,9 +24,14 @@
                 <p-dropdown id="gender" [options]="genderOptions" placeholder="Elija una opción"></p-dropdown>
             </div>
             <div class="form-group">
-                <label for="education">Nivel educativo:</label>
-                <p-dropdown id="education" [options]="educationOptions" placeholder="Elija una opción"></p-dropdown>
+                <label for="birthdate" class="font-bold block mb-2">Fecha de nacimiento:</label>
+                <p-calendar [iconDisplay]="'input'" [showIcon]="true" inputId="birthdate"
+                    placeholder="Elija aquí la fecha" />
             </div>
+        </div>
+        <div class="form-group">
+            <label for="education">Nivel educativo:</label>
+            <p-dropdown id="education" [options]="educationOptions" placeholder="Elija una opción"></p-dropdown>
         </div>
 
         <div class="button-row">
